@@ -5,4 +5,4 @@ The training codes and network structure code are given. Please feel free to cre
 
 # TODO list
 [ ] ething
-[] efij
+[ ] efij
