@@ -213,8 +213,8 @@ class Net(object):
             net_image = inputs_level
 
             # 2X for each level
-            net_image1, net_feature1, net_gradient1 = LapSRNSingleLevel(net_image, net_feature, reuse=tf.AUTO_REUSE)
-            net_image2, net_feature2, net_gradient2 = LapSRNSingleLevel(net_image1, net_feature1, reuse=True)
+            net_image1, net_feature1, net_gradient1 = ResidualSingleLevel(net_image, net_feature, reuse=tf.AUTO_REUSE)
+            net_image2, net_feature2, net_gradient2 = ResidualSingleLevel(net_image1, net_feature1, reuse=True)
 
             return net_image2, net_gradient2, net_image1, net_gradient1
 
@@ -271,7 +271,7 @@ def residual_reducing_network(self, inputs, res_num=1, num_features=64, scale=2)
         inputs = slim.conv2d(inputs, num_features, [3, 3])
         # Up-sample output of the convolution
         inputs = upsample(inputs, scale, activation=None)
-        # net_image1, net_feature1, net_gradient1 = LapSRNSingleLevel(inputs, conv_1, reuse=None)
+        # net_image1, net_feature1, net_gradient1 = ResidualSingleLevel(inputs, conv_1, reuse=None)
         # inputs = slim.conv2d(inputs, 3, [3, 3])
         # One final convolution on the up-sampling output
         # inputs = inputs  # slim.conv2d(x,output_channels,[3,3])
