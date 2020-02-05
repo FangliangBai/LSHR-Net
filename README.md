@@ -6,5 +6,5 @@ The training codes and network structure code are given. Please feel free to cre
 # TODOs
 - [x] Uploading the code
 - [ ] Upload the training dataset
-- [ ] Tidy up the comments
+- [ ] Tidy up the comments and irrelevant experiment code
 - [ ] Rewriting the test code
