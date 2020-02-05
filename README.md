@@ -3,7 +3,7 @@ The code of network structure and related unitily operation for manuscript "LSHR
 
 The training codes and network structure code are given. Please feel free to create an issue if you have any questions.
 
-# TODO list
+# TODOs
 - [x] Uploading the code
 - [ ] Upload the training dataset
 - [ ] Tidy up the comments
